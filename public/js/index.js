@@ -9,9 +9,22 @@ function render(data) {
 
     document.getElementById('message').innerHTML = html
 }
-function alertMsj(data){
-    document.getElementById("nameMsj").innerHTML = 
-
+function alerMsj(data) {
+    // renderizamos la data en el div de la plantilla HTML
+    document.getElementById('nameMsj').innerHTML = `
+            <div class="toast align-items-center text-bg-primary border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;" id="nameMsj">
+                                Nuevo mensaje de:  ${data[data.length - 1].author}
+                            </font>
+                        </font>
+                    </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerca"></button>
+                </div>
+            </div>
+            `
 
 }
 
